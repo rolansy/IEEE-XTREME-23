@@ -1,5 +1,5 @@
 
-n=int(input("Enter Number of Lines : "))
+n=int(input())
 l=[]
 def get_key_with_highest_value(dictionary):
     max_key = None
@@ -12,7 +12,7 @@ def get_key_with_highest_value(dictionary):
     
     return max_key
 for i in range(n):
-    a=input("Enter String : ")
+    a=input()
     l.append(a)
 for i in l:
     d={}
@@ -22,7 +22,9 @@ for i in l:
                 d[j]=1
             else:
                 d[j]+=1
-    
     result = get_key_with_highest_value(d)
-    print(result.upper(),end="\n")
+    if result!='i':
+        print(result.upper(),end="\n")
+    else:
+        print(chr(ord(result.upper())-2),end="")
 
